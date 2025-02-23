@@ -1,40 +1,67 @@
-# Solana pumpfun sniper
+# Pump.fun Sniper Bot
 
-## What is the sniper?
-This sniper is not a ranger or a soldier, lol ....
+## 🚀 Introduction
+This is an advanced Pump.fun sniper bot designed to automatically detect and execute trades on new token launches on the Solana blockchain. The bot monitors Pump.fun for newly listed tokens and executes lightning-fast buys before price surges.
 
-This tool is kind of bot to catch the moment of the token-launch in pumpfun or raydium dex.
-Of course it can buy that token as it is launched, if you can afford.
+## 📌 Features
+- ✅ **Real-time token launch detection** on Pump.fun
+- ✅ **Instant buy execution** with low-latency Solana transactions
+- ✅ **Customizable snipe settings** (amount, slippage, gas priority, etc.)
+- ✅ **Auto-sell feature** to secure profits
+- ✅ **Wallet integration** with Phantom or Sollet
 
-Nobody knows you can make a big money with this. but try, this is worth trying.
+## ⚙️ How It Works
+1. The bot continuously scans Pump.fun for newly listed tokens.
+2. It evaluates liquidity and token contract details to filter out potential scams.
+3. Upon detecting a valid opportunity, it instantly executes a buy transaction.
+4. If auto-sell is enabled, it will sell the token at a predefined profit target.
 
-## How to use?
+## 🛠️ Installation & Setup
+### Prerequisites
+- Node.js (or Python if the bot is written in Python)
+- Solana CLI
+- Phantom or Sollet wallet
+- RPC node access (e.g., QuickNode, Alchemy, or public Solana RPCs)
 
-```
-git clone https://github.com/dieharye/solana-pumpfun-sniper
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/bitfancy/pumpfun-sniper-bot.git
+   cd pumpfun-sniper-bot
+   ```
+2. Install dependencies:
+   ```sh
+   npm install  # or pip install -r requirements.txt if using Python
+   ```
+3. Set up your environment variables in a `.env` file:
+   ```env
+   PRIVATE_KEY="your_wallet_private_key"
+   RPC_URL="your_solana_rpc_url"
+   ```
+4. Run the bot:
+   ```sh
+   npm start  # or python bot.py if using Python
+   ```
 
-cd solana-pumpfun-sniper
+## 🔧 Configuration
+You can customize the bot's behavior using a configuration file (`config.json` or `.env` variables). Key parameters include:
+- **Buy amount**: Amount to invest per trade
+- **Slippage tolerance**: Maximum acceptable price slippage
+- **Auto-sell strategy**: Set take-profit and stop-loss thresholds
+- **Gas priority**: Adjust transaction speed priority
 
-yarn or npm i
-```
+## ⚠️ Risks & Considerations
+- **High volatility**: Newly launched tokens can be extremely volatile.
+- **Scam risk**: Some projects may have rug-pull mechanisms.
+- **Transaction failures**: Network congestion or RPC issues may cause failed transactions.
+- **Security**: Never expose your private keys. Use environment variables for sensitive information.
 
-- Change `.env.example` to `.env`
-- Input your excution wallet private key in `.env` file
-- Also input it in the `config.json`
-- Set the `solIn` in the config_sniper.json as the lamports amount you want.
+## 📜 License
+This project is licensed under the MIT License.
 
-  ex: solIn: `500000000`means `0.5` SOL
+## 🤝 Contributing
+Pull requests and improvements are welcome! Feel free to submit issues or feature requests.
 
-Then run the bot
-```
-yarn start 
+## 📞 Contact
+For questions or collaboration, reach out via Telegram: [@bitfancy](https://t.me/bitfancy)
 
-or
-
-npm start
-```
-
-
-If you need any help, contact with me.
-
-[t.me/midaBricoll](https://t.me/midaBricoll)
