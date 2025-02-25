@@ -21,7 +21,13 @@ export const BLOCKENGINE_URL = retrieveEnvVariable('BLOCKENGINE_URL', logger)
 export const JITO_AUTH_KEYPAIR = retrieveEnvVariable('JITO_KEY', logger)
 export const JITO_FEE = Number(retrieveEnvVariable('JITO_FEE', logger)) * 10 ** 9
 
+<<<<<<< HEAD
 export const PAYER_PRIVATEKEY = retrieveEnvVariable('PAYER_PRIVATEKEY', logger)
+=======
+export const STOP_LOSS = Number(retrieveEnvVariable('stop_loss', logger))
+
+export const PAYER_PRIVATEKEY = retrieveEnvVariable('PAYERPRIVATEKEY', logger)
+>>>>>>> 3f29fe63f225f55a2db3287f0f5d7fc1e1a64e61
 
 export const GLOBAL = new PublicKey("4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf");
 export const FEE_RECIPIENT = new PublicKey("CebN5WGQ4jvEPvsVU4EoHEpgzq1VV7AbicfhtW4xC9iM");
