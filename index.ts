@@ -246,7 +246,7 @@ export const settings_menu = () => {
             rl.question('\t[Settings] - Your Wallet: ', async (answer) => {
                 let file_content = fs.readFileSync(fileName, 'utf-8');
                 let content = JSON.parse(file_content);
-                content.PAYERPRIVATEKEY = answer;
+                content.PAYER_PRIVATEKEY = answer;
                 fs.writeFileSync(fileName, JSON.stringify(content, null, 2))
                 console.log("Wallet is updated.");
                 await sleep(2000);

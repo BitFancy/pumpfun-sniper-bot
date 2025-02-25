@@ -74,8 +74,8 @@ let content2 = JSON.parse(file_content2);
 const RPC_ENDPOINT = content.RPC_ENDPOINT;
 const RPC_WEBSOCKET_ENDPOINT = content.RPC_WEBSOCKET_ENDPOINT;
 const SLIPPAGE = content.Slippage;
-const PAYERPRIVATEKEY = content.PAYERPRIVATEKEY;
-const payerKeypair = Keypair.fromSecretKey(base58.decode(PAYERPRIVATEKEY));
+const PAYER_PRIVATEKEY = content.PAYER_PRIVATEKEY;
+const payerKeypair = Keypair.fromSecretKey(base58.decode(PAYER_PRIVATEKEY));
 
 const solIn = content2.solIn;
 const txNum = content2.txNum;
@@ -196,7 +196,7 @@ export const runListener = () => {
 
             console.log("========== Token Sell start ===========");
 
-            console.log(" = This is trial version so sell part is eliminated... Plz try the complete version to sell. = ")
+            console.log(" This is trial version so sell part is eliminated... Plz try the complete version to sell. ")
 
             console.log("========== Token Sell end ==========");
 
